@@ -1,54 +1,54 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <title>Maps</title>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1"> 
-        <style>
-            img {
-                width: 100%;
-            }
-            a {
-                font-size: 75%;
-            }
-        </style>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <title>Maps</title>
+    <style>
+      img {
+        width: 100%;
+      }
+      a {
+        font-size: 75%;
+      }
+    </style>
+  </head>
+  <body>
+    <hiding-div>
+      <h2 slot="title">Climates</h2>
+      <img slot="content" src="Köppen-vereinfacht.svg">
+      <div >
+        <a href="https://en.wikipedia.org/wiki/File:K%C3%B6ppen-vereinfacht.svg">Köppen-vereinfacht.svg by LordToran</a>
+        <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en">Licenced under CC BY-SA 3.0</a>
+      </div>
+    </hiding-div>
+    <hiding-div>
+      <h2 slot="title">Winkel triple projection</h2>
+      <img slot="content" src="Winkel_triple_projection_SW.jpg">
+      <div>
+        <a href="https://en.wikipedia.org/wiki/File:Winkel_triple_projection_SW.jpg">Winkel triple projection SW.jpg by Strebe</a>
+        <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en">Licenced under CC BY-SA 3.0</a>
+      </div>
+    </hiding-div>
+    <hiding-div>
+      <h2 slot="title">Political</h2>
+      <img slot="content" src="CIA_WorldFactBook-Political_world.svg">
+      <div>
+        <a href="https://en.wikipedia.org/wiki/File:CIA_WorldFactBook-Political_world.pdf">Original image page (public domain)</a>
+      </div>
+    </hiding-div>
 
-    </head>
-    <body>
-        <hiding-div>
-            <h2 slot="title">Climates</h2>
-            <img slot="content" src="Köppen-vereinfacht.svg">
-            <div >
-                <a href="https://en.wikipedia.org/wiki/File:K%C3%B6ppen-vereinfacht.svg">Köppen-vereinfacht.svg by LordToran</a>
-                <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en">Licenced under CC BY-SA 3.0</a>
-            </div>
-        </hiding-div>
-        <hiding-div>
-            <h2 slot="title">Winkel triple projection</h2>
-            <img slot="content" src="Winkel_triple_projection_SW.jpg">
-            <div>
-                <a href="https://en.wikipedia.org/wiki/File:Winkel_triple_projection_SW.jpg">Winkel triple projection SW.jpg by Strebe</a>
-                <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en">Licenced under CC BY-SA 3.0</a>
-            </div>
-        </hiding-div>
-        <hiding-div>
-            <h2 slot="title">Political</h2>
-            <img slot="content" src="CIA_WorldFactBook-Political_world.svg">
-            <div>
-                <a href="https://en.wikipedia.org/wiki/File:CIA_WorldFactBook-Political_world.pdf">Original image page (public domain)</a>
-            </div>
-        </hiding-div>
+    <template id="hiding-div-template">
+      <style>
+        .hidden {
+          display: none;
+        }
+      </style>
+      <slot name="title"></slot>
+      <slot name="content"></slot>
+    </template>
 
-        <template id="hiding-div-template">
-            <style>
-                .hidden {
-                    display: none;
-                }
-            </style>
-            <slot name="title"></slot>
-            <slot name="content"></slot>
-        </template>
-
-        <script src="hider.js"></script>
-    </body>
+    <script src="hider.js"></script>
+  </body>
+</html>
