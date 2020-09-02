@@ -8,8 +8,8 @@ class HidingDiv extends HTMLElement {
 
     shadowRoot.appendChild(templateClone);
 
-    this.shadowRoot.addEventListener('click', () => {
-      const contentSlot = this.shadowRoot
+    shadowRoot.addEventListener('click', () => {
+      const contentSlot = shadowRoot
         .querySelector('slot[name="content"]');
       contentSlot.classList.toggle('hidden');
     });
